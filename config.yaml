@@ -1,0 +1,137 @@
+profile:
+  offer: |
+    Carson AI Agency es una agencia de marketing digital especializada en SEO,
+    Google Ads, Performance Marketing, Marketing B2B, generación de demanda,
+    analítica y consultoría de crecimiento.
+  ideal_client: |
+    Empresas B2B y B2C de México y España que estén buscando activamente una
+    agencia, consultor o especialista externo para captar clientes, mejorar SEO,
+    gestionar Google Ads, optimizar campañas o generar oportunidades comerciales.
+    Prioridad para empresas con una necesidad concreta y capacidad de contratación.
+  not_a_fit: |
+    Ofertas de empleo full-time, prácticas, estudiantes, cursos, personas ofreciendo
+    sus propios servicios, freelancers buscando trabajo, agencias buscando
+    subcontratación barata, intercambios, colaboraciones sin presupuesto o consultas
+    puramente informativas.
+  tone: "profesional, directo, consultivo y breve; sin venta agresiva"
+  signature: ""
+  report_language: es
+
+queries:
+  - "busco agencia de marketing México"
+  - "busco agencia de marketing España"
+  - "busco agencia SEO México"
+  - "busco agencia SEO España"
+  - "necesito agencia SEO"
+  - "recomiendan agencia SEO"
+  - "busco agencia Google Ads"
+  - "necesito ayuda con Google Ads"
+  - "busco especialista Google Ads"
+  - "busco agencia performance marketing"
+  - "necesito generar leads B2B"
+  - "busco agencia marketing B2B"
+  - "recomiendan agencia de marketing"
+  - "looking for SEO agency Mexico"
+  - "looking for SEO agency Spain"
+  - "looking for Google Ads agency Mexico"
+  - "looking for Google Ads agency Spain"
+  - "looking for B2B marketing agency"
+
+exclude:
+  - "we are hiring"
+  - "we're hiring"
+  - "hiring"
+  - "estamos contratando"
+  - "vacante"
+  - "vacantes"
+  - "empleo"
+  - "full-time"
+  - "full time"
+  - "internship"
+  - "prácticas"
+  - "curso"
+  - "cursos"
+  - "ofrezco mis servicios"
+  - "soy freelance"
+  - "busco trabajo"
+  - "[for hire]"
+
+max_age_hours: 72
+
+sources:
+  hackernews:
+    enabled: false
+
+  bluesky:
+    enabled: false
+
+  freelancer:
+    enabled: false
+
+  workana:
+    enabled: false
+
+  apify:
+    enabled: true
+    max_per_query: 10
+    max_wait_seconds: 480
+    x_lang: ""
+    queries:
+      - "busco agencia de marketing México"
+      - "busco agencia de marketing España"
+      - "busco agencia SEO México"
+      - "busco agencia SEO España"
+      - "necesito agencia SEO"
+      - "busco agencia Google Ads"
+      - "necesito ayuda con Google Ads"
+      - "busco especialista Google Ads"
+      - "busco agencia performance marketing"
+      - "necesito generar leads B2B"
+      - "busco agencia marketing B2B"
+      - "looking for SEO agency Mexico"
+      - "looking for SEO agency Spain"
+      - "looking for Google Ads agency Mexico"
+      - "looking for Google Ads agency Spain"
+      - "looking for B2B marketing agency"
+    actors:
+      - preset: linkedin
+
+  web:
+    enabled: false
+
+  reddit:
+    enabled: false
+
+  agentreach:
+    enabled: false
+
+  rss:
+    enabled: false
+    feeds: []
+
+  scrape:
+    enabled: false
+    pages: []
+
+scoring:
+  provider: gemini
+  model: ""
+  base_url: ""
+  effort: low
+  batch_size: 15
+  max_items_per_run: 60
+
+notify:
+  min_score: 72
+  max_leads: 12
+  telegram:
+    enabled: true
+    notify_empty: true
+  discord:
+    enabled: false
+  slack:
+    enabled: false
+
+storage:
+  db_path: data/leadradar.db
+  output_dir: output
