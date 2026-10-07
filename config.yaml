@@ -11,10 +11,24 @@ profile:
     para SEO, Google Ads, SEM, Performance Marketing, generación de leads,
     marketing B2B o consultoría digital. Valorar más si indican responsable,
     alcance, presupuesto, plazo, canal de contacto y contratación inmediata.
+    Clasificar cada oportunidad en tres categorias: (A) CONTRATACION DIRECTA
+    de un servicio concreto de Carson, prioridad maxima; (B) PROYECTO CON
+    PRESUPUESTO o solicitud de propuesta concreta, prioridad alta si hay
+    encaje; (C) LICITACION INTEGRAL que exige PR, influencers, creatividad,
+    medios offline o varios proveedores, prioridad baja aunque exista RFP.
+    Puntuar el ENCAJE COMERCIAL con Carson, no solo la certeza de que se
+    contratara alguna agencia. Para categoria C, limitar a 50/100 salvo
+    que la empresa acepte expresamente una propuesta parcial de SEO,
+    performance o captacion digital. Para A y B valorar necesidad,
+    presupuesto, contacto, plazo, geografia e idioma.
     Una solicitud de recomendaciones solo es lead si hay intención verificable
     de contratar; una publicación en español no demuestra por sí sola que
     la empresa trabaje en un mercado objetivo.
   not_a_fit: |
+    No confundir licitacion real con buen encaje para Carson. Grandes
+    concursos integrales que exijan consorcios, varias agencias o servicios
+    fuera del alcance de Carson deben quedar en prioridad baja y fuera
+    de las alertas principales, salvo posibilidad expresa de lote digital.
     Colaboraciones genéricas, networking, intercambios, trueques, alianzas
     sin contratación explícita, búsqueda de partners para proyectos futuros,
     agencias reclutando otras agencias sin presupuesto confirmado, trabajos
@@ -33,9 +47,6 @@ queries:
   - "solicitamos propuesta agencia SEO"
   - "buscamos contratar agencia marketing digital"
   - "buscamos proveedor SEO"
-  - "licitación agencia marketing digital"
-  - "convocatoria agencias marketing digital"
-  - "RFP agencia marketing"
   - "buscamos agencia Google Ads"
   - "necesitamos contratar agencia Google Ads"
   - "solicitamos presupuesto campañas Google Ads"
@@ -58,7 +69,16 @@ queries:
   - "buscamos agencia de marketing Perú"
   - "buscamos agencia de marketing Argentina"
   - "buscamos agencia de marketing Estados Unidos español"
-  - "solicitud de propuestas SEO marketing digital"
+  - "necesito contratar agencia SEO"
+  - "necesito agencia de Google Ads para mi empresa"
+  - "busco agencia que gestione mis campañas"
+  - "buscamos agencia para captar clientes"
+  - "solicitamos presupuesto SEO"
+  - "solicitamos cotización Google Ads"
+  - "busco proveedor marketing B2B"
+  - "necesitamos mejorar generación de leads"
+  - "contratación de servicios de posicionamiento web"
+  - "buscamos proveedor campañas digitales"
 
 exclude:
   - "we are hiring"
@@ -104,9 +124,6 @@ sources:
       - "solicitamos propuesta agencia SEO"
       - "buscamos contratar agencia marketing digital"
       - "buscamos proveedor SEO"
-      - "licitación agencia marketing digital"
-      - "convocatoria agencias marketing digital"
-      - "RFP agencia marketing"
       - "buscamos agencia Google Ads"
       - "necesitamos contratar agencia Google Ads"
       - "solicitamos presupuesto campañas Google Ads"
@@ -129,7 +146,16 @@ sources:
       - "buscamos agencia de marketing Perú"
       - "buscamos agencia de marketing Argentina"
       - "buscamos agencia de marketing Estados Unidos español"
-      - "solicitud de propuestas SEO marketing digital"
+      - "necesito contratar agencia SEO"
+      - "necesito agencia de Google Ads para mi empresa"
+      - "busco agencia que gestione mis campañas"
+      - "buscamos agencia para captar clientes"
+      - "solicitamos presupuesto SEO"
+      - "solicitamos cotización Google Ads"
+      - "busco proveedor marketing B2B"
+      - "necesitamos mejorar generación de leads"
+      - "contratación de servicios de posicionamiento web"
+      - "buscamos proveedor campañas digitales"
     actors:
       - preset: linkedin
 
