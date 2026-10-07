@@ -87,6 +87,7 @@ sources:
     max_per_query: 10
     max_wait_seconds: 480
     x_lang: ""
+        queries:
         - "busco agencia de marketing"
     - "buscamos agencia de marketing"
     - "necesito agencia de marketing"
