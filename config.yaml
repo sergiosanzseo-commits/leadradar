@@ -4,49 +4,61 @@ profile:
     Google Ads, Performance Marketing, Marketing B2B, generación de demanda,
     analítica y consultoría de crecimiento.
   ideal_client: |
-    Empresas B2B y B2C de México y España que estén buscando activamente una
-    agencia, consultor o especialista externo para captar clientes, mejorar SEO,
-    gestionar Google Ads, optimizar campañas o generar oportunidades comerciales.
-    Prioridad para empresas con una necesidad concreta y capacidad de contratación.
+    Empresas con actividad real en México, España, Latinoamérica o Estados Unidos
+    que necesiten contratar servicios de marketing EN ESPAÑOL para su mercado
+    hispanohablante. Priorizar decisiones de compra explícitas: solicitan
+    cotizaciones, propuestas, RFP, presupuesto, agencia externa o proveedor
+    para SEO, Google Ads, SEM, Performance Marketing, generación de leads,
+    marketing B2B o consultoría digital. Valorar más si indican responsable,
+    alcance, presupuesto, plazo, canal de contacto y contratación inmediata.
+    Una solicitud de recomendaciones solo es lead si hay intención verificable
+    de contratar; una publicación en español no demuestra por sí sola que
+    la empresa trabaje en un mercado objetivo.
   not_a_fit: |
-    Ofertas de empleo full-time, prácticas, estudiantes, cursos, personas ofreciendo
-    sus propios servicios, freelancers buscando trabajo, agencias buscando
-    subcontratación barata, intercambios, colaboraciones sin presupuesto o consultas
-    puramente informativas.
+    Colaboraciones genéricas, networking, intercambios, trueques, alianzas
+    sin contratación explícita, búsqueda de partners para proyectos futuros,
+    agencias reclutando otras agencias sin presupuesto confirmado, trabajos
+    gratis o a comisión, ofertas de empleo, freelancers que ofrecen servicios,
+    cursos, prácticas y consultas informativas. Descartar publicaciones que
+    solo piden creatividad audiovisual, PR, influencers o branding sin
+    demanda de servicios de Carson. Descartar solicitudes dirigidas
+    exclusivamente a mercados no hispanohablantes. No inventar presupuesto
+    ni decisión de compra: si no está claro, no calificar como lead prioritario.
   tone: "profesional, directo, consultivo y breve; sin venta agresiva"
   signature: ""
   report_language: es
 
 queries:
-  - "busco agencia de marketing"
-  - "buscamos agencia de marketing"
-  - "necesito agencia de marketing"
-  - "necesitamos agencia de marketing"
-  - "recomiendan agencia de marketing"
-  - "recomendación agencia de marketing"
-  - "buscamos partner de marketing"
-  - "buscamos proveedor de marketing"
-  - "busco agencia SEO"
-  - "buscamos agencia SEO"
-  - "necesito agencia SEO"
-  - "recomiendan agencia SEO"
-  - "buscamos partner SEO"
-  - "busco agencia Google Ads"
+  - "solicitamos cotización agencia marketing digital"
+  - "solicitamos propuesta agencia SEO"
+  - "buscamos contratar agencia marketing digital"
+  - "buscamos proveedor SEO"
+  - "licitación agencia marketing digital"
+  - "convocatoria agencias marketing digital"
+  - "RFP agencia marketing"
   - "buscamos agencia Google Ads"
-  - "necesitamos Google Ads"
-  - "busco especialista Google Ads"
-  - "buscamos agencia SEM"
-  - "busco agencia performance marketing"
+  - "necesitamos contratar agencia Google Ads"
+  - "solicitamos presupuesto campañas Google Ads"
+  - "buscamos proveedor posicionamiento SEO"
+  - "buscamos agencia de posicionamiento web"
+  - "necesitamos agencia de generación de leads"
+  - "contratar agencia marketing B2B"
   - "buscamos agencia performance marketing"
-  - "buscamos generación de leads"
-  - "necesitamos generar leads B2B"
-  - "buscamos agencia marketing B2B"
-  - "buscamos partner marketing B2B"
-  - "looking for marketing agency"
-  - "looking for SEO agency"
-  - "looking for Google Ads agency"
-  - "looking for performance marketing agency"
-  - "looking for B2B marketing agency"
+  - "solicito cotización marketing digital"
+  - "buscamos agencia SEM"
+  - "requerimos proveedor marketing digital"
+  - "necesitamos externalizar marketing digital"
+  - "buscamos agencia para gestionar campañas"
+  - "buscamos consultora marketing digital"
+  - "buscamos proveedor captación de clientes"
+  - "buscamos agencia de marketing México"
+  - "buscamos agencia de marketing España"
+  - "buscamos agencia de marketing Colombia"
+  - "buscamos agencia de marketing Chile"
+  - "buscamos agencia de marketing Perú"
+  - "buscamos agencia de marketing Argentina"
+  - "buscamos agencia de marketing Estados Unidos español"
+  - "solicitud de propuestas SEO marketing digital"
 
 exclude:
   - "we are hiring"
@@ -67,7 +79,7 @@ exclude:
   - "busco trabajo"
   - "[for hire]"
 
-max_age_hours: 72
+max_age_hours: 168
 
 sources:
   hackernews:
@@ -84,39 +96,40 @@ sources:
 
   apify:
     enabled: true
-    max_per_query: 10
+    max_per_query: 15
     max_wait_seconds: 480
     x_lang: ""
     queries:
-      - "busco agencia de marketing"
-      - "buscamos agencia de marketing"
-      - "necesito agencia de marketing"
-      - "necesitamos agencia de marketing"
-      - "recomiendan agencia de marketing"
-      - "recomendación agencia de marketing"
-      - "buscamos partner de marketing"
-      - "buscamos proveedor de marketing"
-      - "busco agencia SEO"
-      - "buscamos agencia SEO"
-      - "necesito agencia SEO"
-      - "recomiendan agencia SEO"
-      - "buscamos partner SEO"
-      - "busco agencia Google Ads"
+      - "solicitamos cotización agencia marketing digital"
+      - "solicitamos propuesta agencia SEO"
+      - "buscamos contratar agencia marketing digital"
+      - "buscamos proveedor SEO"
+      - "licitación agencia marketing digital"
+      - "convocatoria agencias marketing digital"
+      - "RFP agencia marketing"
       - "buscamos agencia Google Ads"
-      - "necesitamos Google Ads"
-      - "busco especialista Google Ads"
-      - "buscamos agencia SEM"
-      - "busco agencia performance marketing"
+      - "necesitamos contratar agencia Google Ads"
+      - "solicitamos presupuesto campañas Google Ads"
+      - "buscamos proveedor posicionamiento SEO"
+      - "buscamos agencia de posicionamiento web"
+      - "necesitamos agencia de generación de leads"
+      - "contratar agencia marketing B2B"
       - "buscamos agencia performance marketing"
-      - "buscamos generación de leads"
-      - "necesitamos generar leads B2B"
-      - "buscamos agencia marketing B2B"
-      - "buscamos partner marketing B2B"
-      - "looking for marketing agency"
-      - "looking for SEO agency"
-      - "looking for Google Ads agency"
-      - "looking for performance marketing agency"
-      - "looking for B2B marketing agency"
+      - "solicito cotización marketing digital"
+      - "buscamos agencia SEM"
+      - "requerimos proveedor marketing digital"
+      - "necesitamos externalizar marketing digital"
+      - "buscamos agencia para gestionar campañas"
+      - "buscamos consultora marketing digital"
+      - "buscamos proveedor captación de clientes"
+      - "buscamos agencia de marketing México"
+      - "buscamos agencia de marketing España"
+      - "buscamos agencia de marketing Colombia"
+      - "buscamos agencia de marketing Chile"
+      - "buscamos agencia de marketing Perú"
+      - "buscamos agencia de marketing Argentina"
+      - "buscamos agencia de marketing Estados Unidos español"
+      - "solicitud de propuestas SEO marketing digital"
     actors:
       - preset: linkedin
 
@@ -141,13 +154,13 @@ scoring:
   provider: gemini
   model: ""
   base_url: ""
-  effort: low
+  effort: medium
   batch_size: 15
-  max_items_per_run: 60
+  max_items_per_run: 120
 
 notify:
-  min_score: 72
-  max_leads: 12
+  min_score: 82
+  max_leads: 20
   telegram:
     enabled: true
     notify_empty: true
