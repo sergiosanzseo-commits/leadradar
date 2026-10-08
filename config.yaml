@@ -21,14 +21,19 @@ profile:
     que la empresa acepte expresamente una propuesta parcial de SEO,
     performance o captacion digital. Para A y B valorar necesidad,
     presupuesto, contacto, plazo, geografia e idioma.
-    Una solicitud de recomendaciones solo es lead si hay intención verificable
-    de contratar; una publicación en español no demuestra por sí sola que
-    la empresa trabaje en un mercado objetivo.
+    Incluir tambien empresas que expresan un problema de captacion, ventas,
+    SEO, Google Ads o demanda B2B aunque todavia no soliciten presupuesto.
+    Estas son oportunidades POTENCIALES, no contratos confirmados; no
+    inventar urgencia ni presupuesto. Diferenciar A contratacion directa,
+    B proyecto concreto y C necesidad detectada. Las licitaciones amplias
+    son D exploratorias y no deben confundirse con compradores inmediatos.
+    Una publicacion en español no prueba por si sola mercado objetivo.
   not_a_fit: |
     No confundir licitacion real con buen encaje para Carson. Grandes
     concursos integrales que exijan consorcios, varias agencias o servicios
-    fuera del alcance de Carson deben quedar en prioridad baja y fuera
-    de las alertas principales, salvo posibilidad expresa de lote digital.
+    fuera del alcance de Carson deben quedar en prioridad baja,
+    identificadas como exploratorias. Solo descartar si no hay ningun
+    componente relevante para Carson.
     Colaboraciones genéricas, networking, intercambios, trueques, alianzas
     sin contratación explícita, búsqueda de partners para proyectos futuros,
     agencias reclutando otras agencias sin presupuesto confirmado, trabajos
@@ -79,6 +84,20 @@ queries:
   - "necesitamos mejorar generación de leads"
   - "contratación de servicios de posicionamiento web"
   - "buscamos proveedor campañas digitales"
+  - "necesitamos conseguir más clientes"
+  - "cómo conseguir clientes para mi empresa"
+  - "buscamos mejorar captación de clientes"
+  - "nuestra web no aparece en Google"
+  - "necesitamos mejorar el SEO"
+  - "nuestros anuncios no convierten"
+  - "necesitamos más leads B2B"
+  - "recomendáis agencia de marketing"
+  - "alguien recomienda agencia SEO"
+  - "quién gestiona campañas Google Ads"
+  - "buscamos ayuda con marketing digital"
+  - "queremos aumentar ventas online"
+  - "no conseguimos clientes con Google Ads"
+  - "recomendación consultor marketing digital"
 
 exclude:
   - "we are hiring"
@@ -103,20 +122,24 @@ max_age_hours: 168
 
 sources:
   hackernews:
-    enabled: false
+    enabled: true
+    queries: ["SEO", "marketing agency", "Google Ads", "B2B leads", "customer acquisition"]
 
   bluesky:
-    enabled: false
+    enabled: true
+    langs: [es]
+    queries: ["agencia SEO", "Google Ads", "captar clientes", "marketing B2B", "necesito marketing", "posicionamiento web", "agencia marketing"]
 
   freelancer:
-    enabled: false
+    enabled: true
+    queries: ["SEO español", "Google Ads", "marketing digital", "lead generation", "marketing B2B"]
 
   workana:
     enabled: false
 
   apify:
     enabled: true
-    max_per_query: 15
+    max_per_query: 5
     max_wait_seconds: 480
     x_lang: ""
     queries:
@@ -156,14 +179,33 @@ sources:
       - "necesitamos mejorar generación de leads"
       - "contratación de servicios de posicionamiento web"
       - "buscamos proveedor campañas digitales"
+      - "necesitamos conseguir más clientes"
+      - "recomendáis agencia de marketing"
+      - "alguien recomienda agencia SEO"
+      - "buscamos mejorar captación de clientes"
+      - "necesitamos más leads B2B"
+      - "nuestros anuncios no convierten"
+      - "queremos aumentar ventas online"
     actors:
       - preset: linkedin
+      - preset: x
+      - preset: reddit
 
   web:
-    enabled: false
+    enabled: true
+    provider: ddgs
+    sites:
+      - linkedin.com/posts
+      - reddit.com
+      - quora.com
+      - indiehackers.com
+    freshness: week
+    results_per_query: 8
+    max_requests: 16
+    region: es-es
 
   reddit:
-    enabled: false
+    enabled: false  # Reddit RSS suele estar bloqueado en Actions; usar Apify preset
 
   agentreach:
     enabled: false
@@ -182,11 +224,11 @@ scoring:
   base_url: ""
   effort: medium
   batch_size: 15
-  max_items_per_run: 120
+  max_items_per_run: 100
 
 notify:
-  min_score: 82
-  max_leads: 20
+  min_score: 55
+  max_leads: 30
   telegram:
     enabled: true
     notify_empty: true
